@@ -1,0 +1,10 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .custom{
+    background-image: url("../assets/homeScreen.jpg");
+     height: 100%;
+  
+    /* Center and scale the image nicely */
+
+  }

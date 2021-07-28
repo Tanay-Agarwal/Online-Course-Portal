@@ -1,0 +1,48 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center" style="height: 100vh;">
+  <br>
+  <br>
+  <br>
+  <br>
+    <mat-card style="width: fit-content; margin-left: 36%;">
+        <mat-card-title>Contact Form</mat-card-title>
+        <form [formGroup]="ownerForm" autocomplete="off" novalidate (ngSubmit)="create(ownerForm.value)" fxLayout="column wrap"
+        fxLayoutAlign="center center" fxLayoutGap="10px" >
+    <mat-card-content class="parent">
+      <mat-form-field >
+        <input matInput type="text" placeholder="Your ID" formControlName="id" required>
+        <mat-hint align="end">Not more then 10 characters long.</mat-hint>
+        <mat-error *ngIf="hasError('id', 'required')">ID is required</mat-error>
+        <mat-error *ngIf="hasError('id', 'maxlength')">You have more than 10 characters</mat-error>
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput type="text" placeholder="Full Name" formControlName="name" required>
+        <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+        <mat-error *ngIf="hasError('name', 'required')">Name is required</mat-error>
+        <mat-error *ngIf="hasError('name', 'maxlength')">You have more than 60 characters</mat-error>
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput type="text" placeholder="Email" formControlName="email" required>
+        <mat-hint align="end">Should be in email format.</mat-hint>
+        <mat-error *ngIf="hasError('email', 'required')">Email is required</mat-error>
+        <mat-error *ngIf="hasError('email', 'email')">Should be in email format.</mat-error>
+      </mat-form-field>
+      <mat-form-field >
+        <mat-hint align="end">Must be Numeric only.</mat-hint>
+        <input matInput type="text" placeholder="Phone Number" formControlName="phone" required>
+        <mat-error *ngIf="hasError('phone', 'required')">Phone Number is required</mat-error>
+        <mat-error *ngIf="hasError('phone', 'pattern')">Must be Numeric only.</mat-error>
+      </mat-form-field>
+      <mat-form-field >
+        <textarea matInput type="text" placeholder="Message" formControlName="message" required></textarea>
+        <mat-error *ngIf="hasError('message', 'required')">Address is required</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="warn">Submit</button>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </form>
+        <mat-card-actions>
+          
+        </mat-card-actions>
+      </mat-card>
+  </section>

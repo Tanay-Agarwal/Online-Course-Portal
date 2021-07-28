@@ -1,0 +1,63 @@
+<p>
+  <mat-toolbar>
+    <span class="example-spacer" >
+      <a class="example-app-name" href="/" style="color: black">
+        Amdocs Project
+      </a>
+    </span>
+    <span class="example-spacer">
+      <div class="row">
+        <div class="col">
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle
+              style="color: black;">Forms</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <a class="example-app-name" href="/registeration/new" style="color: black">
+                Registeration Form
+              </a>
+              <br>
+              <a class="example-app-name" href="/feedback/new" style="color: black">
+                Feedback Form
+              </a>
+              <br>
+              <a class="example-app-name" href="/contact/new" style="color: black">
+                Contact Form
+              </a>
+              <br>
+              <a class="example-app-name" href="/course/new" style="color: black">
+                Course Form
+              </a>
+              <br>
+              <a class="example-app-name" href="/enroll-course" style="color: black">
+                Course Enrollment
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+    <span class="example-spacer">
+      <a class="example-app-name" href="/course" style="color: black">
+        Courses
+      </a>
+    </span>
+    <span class="example-spacer">
+      <a class="example-app-name" href="/feedback" style="color: black">
+        Feedbacks
+      </a>
+    </span>
+    <span class="example-spacer">
+      <a class="example-app-name" href="/users" style="color: black">
+        Users
+      </a>
+    </span>
+    <span class="example-spacer">
+      <a class="example-app-name" href="/contact" style="color: black">
+        Conatct
+      </a>
+    </span>
+  </mat-toolbar>
+</p>
+<div class="custom">
+  <router-outlet></router-outlet>
+</div>
